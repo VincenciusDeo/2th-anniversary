@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Anniversary 💖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Floating background hearts/sparkles -->
+<div class="bg-decor" id="bgDecor"></div>
+
+<!-- Audio control -->
+<button id="muteBtn" class="mute-btn" title="Mute / Unmute">🔊</button>
+
+<!-- =================== BAGIAN 0: OPENING =================== -->
+<section class="section section-0 active" id="section-0">
+  <div class="opening-content">
+    <div class="floating-heart">💖</div>
+    <h1 class="typing" id="typingText"></h1>
+    <button class="cta-btn" id="startBtn">Klik untuk mulai 💕</button>
+  </div>
+</section>
+
+<!-- =================== BAGIAN 1: AWAL CERITA =================== -->
+<section class="section section-1" id="section-1">
+  <div class="story-container">
+    <h2 class="section-title">Awal Cerita Kita ✨</h2>
+    <div class="story-block reveal">
+      <div class="story-illustration">🌸</div>
+      <p>Masih ku ingat, hari pertama kita bertemu...</p>
+    </div>
+    <div class="story-block reveal">
+      <div class="story-illustration">☕</div>
+      <p>Senyum mu yang malu-malu, dan tatapan mata yang penuh arti.</p>
+    </div>
+    <div class="story-block reveal">
+      <div class="story-illustration">💌</div>
+      <p>Siapa sangka, dari obrolan kecil itu... kita jadi sedekat ini.</p>
+    </div>
+    <div class="story-block reveal">
+      <div class="story-illustration">🌷</div>
+      <p>Tuhan benar-benar tahu cara mempertemukan dua hati yang tepat.</p>
+    </div>
+    <button class="cta-btn next-btn" data-next="section-2">Lanjut Kenangan 💕</button>
+  </div>
+</section>
+
+<!-- =================== BAGIAN 2: KENANGAN =================== -->
+<section class="section section-2" id="section-2">
+  <div class="memories-container">
+    <h2 class="section-title">Kenangan Kita 📸</h2>
+    <p class="subtitle">Setiap momen, selalu jadi favoritku</p>
+    <div class="polaroid-grid">
+      <div class="polaroid"><div class="photo-placeholder">📷<br><small>Foto 1</small></div><p>First Date 💕</p></div>
+      <div class="polaroid"><div class="photo-placeholder">📷<br><small>Foto 2</small></div><p>Movie Night 🎬</p></div>
+      <div class="polaroid"><div class="photo-placeholder">📷<br><small>Foto 3</small></div><p>Sunset Walk 🌅</p></div>
+      <div class="polaroid"><div class="photo-placeholder">📷<br><small>Foto 4</small></div><p>Coffee Date ☕</p></div>
+      <div class="polaroid"><div class="photo-placeholder">📷<br><small>Foto 5</small></div><p>Liburan 🏖️</p></div>
+      <div class="polaroid"><div class="photo-placeholder">📷<br><small>Foto 6</small></div><p>Just Us 💞</p></div>
+    </div>
+    <p class="hint">💡 Ganti placeholder ini dengan foto-foto kalian di file <code>script.js</code> atau langsung di HTML.</p>
+    <button class="cta-btn next-btn" data-next="section-3">Lihat Semesta Kita 🌌</button>
+  </div>
+</section>
+
+<!-- =================== BAGIAN 3: THE UNIVERSE =================== -->
+<section class="section section-3" id="section-3">
+  <div class="universe">
+    <div class="stars-bg" id="starsBg"></div>
+    <div class="star star-a" id="starA"></div>
+    <div class="star star-b" id="starB"></div>
+    <div class="star-merged" id="starMerged"></div>
+    <div class="universe-text">
+      <p id="uniText1">dari dua yang asing...</p>
+      <p id="uniText2">menjadi satu semesta ✨</p>
+    </div>
+    <button class="cta-btn next-btn universe-next" data-next="section-4">Pesan Untukmu 💌</button>
+  </div>
+</section>
+
+<!-- =================== BAGIAN 4: FINAL MESSAGE =================== -->
+<section class="section section-4" id="section-4">
+  <div class="letter-container">
+    <h2 class="section-title">Untukmu, Sayangku 💌</h2>
+    <p class="hint italic">baca pelan-pelan ya...</p>
+    <div class="letter" id="letterText"></div>
+    <button class="cta-btn next-btn" id="surpriseBtn">Ada kejutan untukmu 🎉</button>
+  </div>
+</section>
+
+<!-- =================== BAGIAN 5: SURPRISE =================== -->
+<section class="section section-5" id="section-5">
+  <canvas id="confettiCanvas"></canvas>
+  <div class="surprise-content">
+    <div class="big-hearts">
+      <span>❤️</span><span>💖</span><span>💕</span><span>💗</span><span>💝</span>
+    </div>
+    <h1 class="surprise-title">Happy 2nd Anniversary<br>Sayangku ❤️</h1>
+    <p class="surprise-sub">Terima kasih sudah jadi bagian terindah dalam hidupku 💞</p>
+    <button class="cta-btn" onclick="location.reload()">Putar Ulang 🔁</button>
+  </div>
+</section>
+
+<!-- ====== AUDIO ====== -->
+<!-- Ganti URL audio sesuai keinginanmu (file lokal atau link) -->
+<audio id="audio-0" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1bffe7d9a3.mp3?filename=cute-and-sweet-loop-110483.mp3"></audio>
+<audio id="audio-1" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/10/18/audio_3f0a1f5f0d.mp3?filename=relaxing-piano-music-117596.mp3"></audio>
+<audio id="audio-2" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2023/06/19/audio_8b1e6d9f3c.mp3?filename=love-romantic-background-music-149493.mp3"></audio>
+<audio id="audio-3" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=cinematic-emotional-piano-114484.mp3"></audio>
+<audio id="audio-4" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/10/18/audio_3f0a1f5f0d.mp3?filename=relaxing-piano-music-117596.mp3"></audio>
+<audio id="audio-5" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a87f44.mp3?filename=happy-and-joyful-children-115187.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
